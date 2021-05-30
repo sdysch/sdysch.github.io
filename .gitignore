@@ -1,6 +1,16 @@
 _site
-.sass-cache
-.jekyll-cache
+.DS_Store
+.jekyll
 .jekyll-metadata
-vendor
+.bundle
+.sass-cache
 Gemfile.lock
+node_modules
+package.json
+*.gem
+*.gemspec
+.jekyll-cache
+
+# ignoring my global gitignore
+!images/*
+!images/**
