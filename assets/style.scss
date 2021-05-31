@@ -5,7 +5,7 @@
 // IMPORTS
 //
 
-@import "reset";
+//@import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
@@ -13,8 +13,7 @@
 /* BASE RULES */
 /**************/
 
-//@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html {
   font-size: 100%;
@@ -22,9 +21,9 @@ html {
 }
 
 body {
-  background: #fff;
+  background: $nord2;
   font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #404040;
+  color: $nord5;
   line-height: 1.7;
   font-weight: 400;
   font-size: 18px;
@@ -40,7 +39,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: $darkerGray;
+  color: $nord12;
   font-weight: bold;
 
   line-height: 1.7;
@@ -82,12 +81,12 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: #222;
 }
 
 p {
   margin: 15px 0;
 }
+
 
 table {
 	padding: 0;
@@ -129,60 +128,17 @@ table tr td :last-child {
 	margin-bottom: 0;
 }
 
-/*.detailed .entry p:first-of-type:first-letter {
-    float: left;
-    margin: 0.13em 0.05em 0 -0.05em;
-    font-size: 3.333em;
-    line-height: 0.75em;
-}*/
-
-#search-container {
-  text-align: center;
-}
-
-#search-input {
-  width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 18px;
-  background-color: #fff3ff;
-}
-
 .share-box {
   font-weight: bold;
   color: #222;
 }
 
-span[data-pullquote] {
-  display: block;
-
-  @include mobile {
-    display: none;
-  }
-}
-
-span[data-pullquote]:before {
-  content: attr(data-pullquote);
-  float: right;
-  width: 200px;
-  margin: 0 0 0.5em 30px;
-  padding: 0 -5% 0 0;
-  font-size: 1.3em;
-  font-style: italic;
-  color: green;
-  text-align: center;
-}
-
 a {
-  color: $blue;
+  color: $nord9;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $nord9;
   }
 }
 
@@ -232,17 +188,17 @@ p > img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: $nord2;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $nord0;
+  background: $nord4;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $nord0;
+  background: $nord2;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -271,7 +227,7 @@ p > img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $nord2;
 
   @include mobile {
     text-align: center;
@@ -307,7 +263,7 @@ p > img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $nord1;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -322,7 +278,7 @@ p > img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $nord4;
   font-size: 16px;
 
   @include mobile {
@@ -345,14 +301,14 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $nord1;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $nord9;
     }
   }
 }
@@ -363,7 +319,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $nord2;
 }
 
 .posts > .post:last-child {
@@ -374,9 +330,9 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    /*border-left: 2px solid $gray;*/
+    /*border-left: 2px solid $nord4;*/
     padding: 0.1em 1em;
-    color: $gray;
+    color: $nord4;
     font-size: 22px;
     font-style: italic;
     background-color: #ede1ff;
@@ -384,9 +340,9 @@ nav {
 
   .you-may-like{
     margin: 1.8em .8em;
-    /*border-left: 2px solid $gray;*/
+    /*border-left: 2px solid $nord4;*/
     padding: 0.1em 1em;
-    color: $gray;
+    color: $nord4;
     font-size: 22px;
     font-style: italic;
     background-color: #ddffb5;;
@@ -416,7 +372,7 @@ nav {
   bottom: 0;
   width: 100%;
   height: 89px;
-  background-color: $lightGray;
+  background-color: $nord2;
 }
 
 footer {
@@ -1138,8 +1094,5 @@ Modules - reusable parts of our design
 }
 
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "highlights";
 @import "darcula";
 @import "svg-icons";
