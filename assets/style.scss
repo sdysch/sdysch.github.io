@@ -331,3 +331,29 @@ footer {
 .wrapper-main {
   padding-bottom: 134px;
 }
+
+// posts
+.author_title{
+  text-align: center;
+  color: $nord9;
+  letter-spacing: 2px;
+}
+
+.post_date{
+  text-align: center;
+  color: $nord9;
+}
+
+.post-tags {
+  text-align: center;
+  line-height: 35px;
+}
+
+.post-tags a {
+  font-size: 14.5px;
+  padding: 2px 13px;
+  border: none;
+  background-color: $nord14;
+  border-radius: 50px;
+  color: #fff;
+}
