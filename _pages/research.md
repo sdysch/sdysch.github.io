@@ -14,7 +14,7 @@ My CV is available upon request
 	- [INSPIRE-HEP](https://inspirehep.net/authors/1511801)
 
 ## Selected publications
-- _A self-calibrating, double-ratio method to test tau lepton universality in W boson decays at the LHC._
+- <span style="font-size:15px;">_A self-calibrating, double-ratio method to test tau lepton universality in W boson decays at the LHC._</span>
 	- [arXiv:1910.11783](https://arxiv.org/abs/1910.11783), [https://doi.org/10.1140/epjc/s10052-020-7696-1](https://doi.org/10.1140/epjc/s10052-020-7696-1)
 
 # Presentations
