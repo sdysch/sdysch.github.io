@@ -1,0 +1,113 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "darcula";
+@import "svg-icons";
+
+:root {
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+}
+
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+@import url('https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css');
+
+$base-font-family: 'News Cycle', sans-serif !default;
+$mono-font-family: 'Inconsolata', monospace !default;
+$base-font-size:   18px !default;
+$mono-font-size:   18px !default;
+$small-font-size:  $base-font-size * 0.9 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #d8dee9 !default;
+$background-color: #434c5e !default;
+$brand-color:      #81a1c1 !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+@import "minima";
+
+
+
+.site-nav {
+    .page-link {
+        font-family: $mono-font-family;
+        font-size: $mono-font-size;
+        color: $text-color;
+    }
+}
+
+.site-title {
+    font-family: $mono-font-family;
+    color: $brand-color;
+}
+
+.site-footer {
+    font-family: $mono-font-family;
+    font-size: $mono-font-size;
+    color: $text-color;
+    border-top: none;
+}
+
+.site-header {
+    border-top: none;
+    border-bottom: none;
+}
+
+ol, ul {
+  list-style-position: inside;
+}
+
+.footer-col {
+    width: -webkit-calc(100%);
+    width: calc(100%);
+}
+
+
+.footer-col-1 {
+  width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+  width:         calc(40% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-palm) {
+  .footer-col {
+    float: none;
+    margin: 0 auto;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
