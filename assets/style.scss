@@ -4,7 +4,7 @@
 @import "variables";
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import "darcula";
+//@import "darcula";
 @import "svg-icons";
 @import "reset";
 
@@ -356,4 +356,10 @@ footer {
   background-color: $nord14;
   border-radius: 50px;
   color: #fff;
+}
+
+// code syntax highlighting
+code {
+	background: $nord3;
+	color: $nord6;
 }
