@@ -34,6 +34,8 @@ footer-links:
 url: https://sdysch.github.io/
 enforce_ssl: sdysch.github.io/
 
+baseurl: ''
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
