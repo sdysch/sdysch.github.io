@@ -21,5 +21,5 @@ My CV is available upon request
 - <span style="font-size:15px;">ATLAS Top workshop, online. **June 2021**. Talk: _Testing lepton flavour universality with top quark events_</span>
 - <span style="font-size:15px;">International Conference on High Energy Physics, Seoul, South Korea. **July 2018**. [Poster presentation](https://cds.cern.ch/record/2634682)</span>
 - <span style="font-size:15px;">ATLAS UK conference, Birmingham, UK. **January 2018**. Talk: _Status and future plans of the Tau combined performance group_</span>
-- <span style="font-size:15px;">ATLAS Tau and HLeptons workshop, Munich, Germany. **October 2017**. Talk: _Tau identification and electron veto performance measurements_</span>
+- <span style="font-size:15px;">ATLAS Tau workshop, Munich, Germany. **October 2017**. Talk: _Tau identification and electron veto performance measurements_</span>
 - <span style="font-size:15px;">European Physical Society Conference on High Energy Physics, Venice, Italy. **July 2017**. [Poster presentation](https://cds.cern.ch/record/2274251/)</span>
