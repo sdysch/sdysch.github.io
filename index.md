@@ -16,8 +16,7 @@ My [thesis](./thesis) topic involved understanding the identification of [tau le
 including testing their [universality](https://en.wikipedia.org/wiki/Lepton#Universality) in W boson decays.
 
 Sometimes I may think of something interesting to share, which I will write in my [blog](/archive).
-Currently, I am looking at simulations of different strategies for the two-player board game [Mancala](https://en.wikipedia.org/wiki/Mancala),
-with the ultimate aim to learn and implement a reinforcement learning agent.
+Currently, I am looking at simulations of different strategies for the two-player board game [Mancala](https://en.wikipedia.org/wiki/Mancala).
 If you are interested, follow the project on git [here](https://github.com/sdysch/mancala).
 
 Feel free to get in [contact](/contact)!
