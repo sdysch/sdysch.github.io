@@ -14,3 +14,4 @@ package.json
 # ignoring my global gitignore
 !images/*
 !images/**
+!contact/*
