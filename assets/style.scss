@@ -11,6 +11,7 @@
 @import url("https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css");
 // font awesome
 @import url("https://use.fontawesome.com/releases/v5.0.6/css/all.css");
+@import "dracula";
 
 html {
   font-size: 100%;
@@ -364,7 +365,7 @@ footer {
 }
 
 // code syntax highlighting
-code {
-	background: $nord3;
-	color: $nord6;
-}
+//code {
+//	background: $nord3;
+//	color: $nord6;
+//}

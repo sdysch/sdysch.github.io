@@ -10,3 +10,4 @@ permalink: /contact/
 ```
 	curl -sL https://sdysch.github.io/contact/key.gpg | gpg --import
 ```
+[<img src="{{ site.baseurl }}/contact/IMG_20180225_152007.jpg" alt="" figcaption="" />]({{ site.baseurl }}/)
