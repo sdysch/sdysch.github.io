@@ -13,7 +13,7 @@ I have always suspected that there is an advantage to whoever moves first. Let's
 
 <img src="{{ site.baseurl }}/images/mancala/mancala.jpg" height=300 alt="Mancala board" figcaption="Mancala board" class="center"/>
 
-### Rules
+## Rules
 Mancala is a two-player board game, where players compete to capture more marbles than their opponent.
 The rules are as follows:
 
@@ -54,7 +54,7 @@ print(board)
 
 ```
 
-### Initial analysis
+## Initial analysis
 Throughout the rest of this article, _player one_ refers to the player who moves first, and _player two_ is the player who moves second.
 Initially, I chose to simulate both players as a random agent. That is, from the available moves a player has, one is selected randomly with equal weightings per move.
 As we will later see, this does not form an optimal strategy for either player.
@@ -74,12 +74,12 @@ This might suggest that a selection strategy which maximises the number of moves
 Because player one always moves first, and gets a free choice, it is interesting to calculate the win, lose, and draw rates for the different first move choices.
 ![First move win rates for random-random strategy]({{ site.baseurl }}/images/mancala/random_random_first_move_prob.png)
 
-### Different strategies
+## Different strategies
 From the initial analysis, we know that players tend to win if they choose buckets which maximise the number of moves they make.
-Clearly, making choices which maximise their score increase will also perform well.
+Clearly, players using strategies which involve making choices maximising their score increase will also perform well.
 With these ideas in mind, we can develop different strategies for players to apply, and then simulate them against each other.
 
-**Exact strategy**
+### Exact strategy
 
 For this strategy, the player makes choices by favouring moves which will end in the player's goal, therefore giving them another move.
 If multiple moves of this kind are possible, they are played in order, starting with the closest to the player's goal, enabling a repeated advantage of this rule.
@@ -110,6 +110,68 @@ print(board)
 
 If no such moves are possible, then the strategy falls back to either random, or a new strategy described below.
 
-**Max score strategy**
+### Max score strategy
 
-For this strategy, the player chooses the bucket which will give them the largest score increase
+For this strategy, the player chooses the bucket which will give them the largest score increase once all marbles have been distributed across the board.
+If a considered choice will result in the last marbles being place in the player's goal, therein giving them another choice, then subsequent moves are considered in a recursive fashion.
+
+### Maximum marbles strategy
+
+For this strategy, the bucket with the most marbles is chosen. If multiple moves fulfil this criteria, then a bucket is selected randomly, with equal probability.
+
+### Maximum moves strategy
+
+Similar to the maximum score strategy, except that the figure of merit to be maximised is the number of moves a player will make.
+
+### Minimax strategy
+
+This strategy implements the so-called [minimax](https://en.wikipedia.org/wiki/Minimax) strategy from game theory.
+A good explanation of this strategy that I found can be found in [Sebastian Lague's video.](https://www.youtube.com/watch?v=l-hh51ncgDI&t=304s&ab_channel=SebastianLague)
+
+After a full sequence of moves has been made, the board state is fully known for both players (i.e. moves are deterministic, and the players have perfect information).
+The *evaluation* of the current board state, can be written as the difference between player one's score, and player two's score.
+Player one will always try to maximise this evaluation, whereas player two will always try to minimise this evaluation.
+
+If it is player one's turn to move, then all of player one's moves are considered, and the board evaluation after each of these moves is calculated.
+Then it will be player two's turn to move, who will try to minimise the evaluation from their set of available moves, and make this choice.
+Player one will choose the move which gives the maximum evaluation of the set of these minima.
+
+
+![Diagram of minimax strategy]({{ site.baseurl }}/images/mancala/minimax.jpg)
+
+
+The tree depth is in theory unlimited, until the trees reach the end of the mancala game.
+However, in my simulations, I set this to be 3, but investigated the computational time impact from higher depth values.
+One form of speed increase is [alpha-beta pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning), which stops evaluating further move trees if no further improvement can be made.
+I.e. at least one alternative move which performs better than the move under consideration has been found.
+Some (not-so-quick) tests with different depth settings show that the average time per game (from 100 games) is much quicker with alpha-beta pruning applied.
+
+![Minimax timing study]({{ site.baseurl }}/images/mancala/minmax_timing.png)
+
+The dependency of the depth parameter can be investigated by running 5000 simulations of player one (minimax) vs player two (max score).
+
+![Minimax depth study]({{ site.baseurl }}/images/mancala/min_max_depth_study.png)
+
+As we would expect, as the depth is increase then player one's win rate increases - to almost 80%!
+It appears that the win rate starts to saturate, which is likely because at some point the large depth means that the trees
+will reach the end of the game (no more moves will be available).
+However, I did not have the computational power (or patience) to evaluate games with any higher depth.
+
+## Putting it all together
+Putting it all together, I ran simulations of several different agents against each other, and calculated player one's win rate.
+The matrix of these probabilities is shown below.
+
+![Player 1 win probabilities]({{ site.baseurl }}/images/mancala/player_1_win_probs.png)
+
+By inspecting the diagonal, we can answer my initial question; yes, it does appear that there is an advantage for the player moving first, provided that similar strategies are applied.
+It seems that most agents can out-perform random chance.
+I also investigated player one's win rate dependency on the initial move choice.
+
+![First move win rates]({{ site.baseurl }}/images/mancala/all_strats_first_move_win_prob.png)
+
+It appears that whatever the strategy, choosing bucket 4 as an initial choice is a bad idea.
+
+## What's next?
+This post has 'part 1' in the title...so what's next?
+As an excuse to learn about [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning), I want to try implementing an agent with some sort of machine learning focus.
+When I find the time to do this, it will be described in a part 2.
