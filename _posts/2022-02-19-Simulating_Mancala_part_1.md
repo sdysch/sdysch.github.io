@@ -19,7 +19,7 @@ The rules are as follows:
 
 * Each player has six buckets, initially containing four marbles. They also have a score bucket.
 * A move is made by player one choosing one of their six buckets, collecting all their marbles.
-* The player then distributes the marbles in subsequent buckets, including the player's score bucket, moving in a anti-clockwise direction until no marbles remain.
+* The player then distributes the marbles in subsequent buckets, including the player's score bucket, moving in an anti-clockwise direction until no marbles remain.
 * The opponent's score bucket is skipped over.
 
 Depending on the bucket that a player places their last marble in, additional rules are applied:
@@ -27,9 +27,11 @@ Depending on the bucket that a player places their last marble in, additional ru
 * If the player ends their turn in their score bucket, then they get to choose a new move from their non-zero buckets.
 * If the player ends in an empty bucket, then the player's turn is over.
 * The game is over when either half of the marbles have been captured, or one player manages to empty all the buckets on their side.
-* When the game is over, any remaining marbles on each player's side are added to their total
+* When the game is over, any remaining marbles on each player's side are added to their score bucket.
 
 The winner is the player with the most marbles.
+
+The board is represented like so:
 
 ```python
 from core.game.Board import Board
@@ -56,22 +58,25 @@ print(board)
 
 ## Initial analysis
 Throughout the rest of this article, _player one_ refers to the player who moves first, and _player two_ is the player who moves second.
-Initially, I chose to simulate both players as a random agent. That is, from the available moves a player has, one is selected randomly with equal weightings per move.
+Initially, I chose to simulate both players as a random agent. That is, from the available bucket choices a player has, one is selected randomly with equal weightings.
 As we will later see, this does not form an optimal strategy for either player.
 
-For these tests, I ran 10000 simulations with player one and player two utilising a random strategy for their move choice.
+For these tests, I ran 10000 simulations with player one and player two, utilising a random strategy for their move choice.
+
 ![Distribution of player moves and scores for the random-random strategy pairing]({{ site.baseurl }}/images/mancala/random_random_nmoves_score.png)
 
 It's clear that player one tends to have a higher score than player two, and thus we would expect player one to have a higher win percentage.
 Player one also makes more moves than player two, which is to be expected with the higher overall score that player one has.
 Examining the distribution of player moves for the three different outcomes (win, lose, draw) provides confirmation of this.
+
 ![Distribution of player moves for different game outcomes]({{ site.baseurl }}/images/mancala/random_random_move_distributions.png)
+
 These distributions are unit normalised, to better compare the shapes.
 
 When players win, the mean number of moves made is higher than the mean number of moves made when they lose.
 This might suggest that a selection strategy which maximises the number of moves made on a given turn could perform better than a random choice.
 
-Because player one always moves first, and gets a free choice, it is interesting to calculate the win, lose, and draw rates for the different first move choices.
+Because player one always moves first, with a free choice, it is interesting to calculate the win, lose, and draw rates for the different first move choices.
 ![First move win rates for random-random strategy]({{ site.baseurl }}/images/mancala/random_random_first_move_prob.png)
 
 ## Different strategies
@@ -128,20 +133,20 @@ Similar to the maximum score strategy, except that the figure of merit to be max
 This strategy implements the so-called [minimax](https://en.wikipedia.org/wiki/Minimax) strategy from game theory.
 A good explanation of this strategy that I found can be found in [Sebastian Lague's video.](https://www.youtube.com/watch?v=l-hh51ncgDI&t=304s&ab_channel=SebastianLague)
 
-After a full sequence of moves has been made, the board state is fully known for both players (i.e. moves are deterministic, and the players have perfect information).
+After a full sequence of moves has been made, the board state is completely known for both players (i.e. moves are deterministic, and the players have perfect information).
 The *evaluation* of the current board state, can be written as the difference between player one's score, and player two's score.
 Player one will always try to maximise this evaluation, whereas player two will always try to minimise this evaluation.
 
 If it is player one's turn to move, then all of player one's moves are considered, and the board evaluation after each of these moves is calculated.
-Then it will be player two's turn to move, who will try to minimise the evaluation from their set of available moves, and make this choice.
+Then it will be player two's turn to move, who will try to minimise the evaluation from their set of available moves.
 Player one will choose the move which gives the maximum evaluation of the set of these minima.
 
 
 ![Diagram of minimax strategy]({{ site.baseurl }}/images/mancala/minimax.jpg)
 
 
-The tree depth is in theory unlimited, until the trees reach the end of the mancala game.
-However, in my simulations, I set this to be 3, but investigated the computational time impact from higher depth values.
+The tree depth is in theory unlimited, but in practice limited until the trees reach the end of the mancala game, or the computational time becomes too expensive.
+In my simulations, I set this to be 3, but investigated the computational time impact from higher depth values.
 One form of speed increase is [alpha-beta pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning), which stops evaluating further move trees if no further improvement can be made.
 I.e. at least one alternative move which performs better than the move under consideration has been found.
 Some (not-so-quick) tests with different depth settings show that the average time per game (from 100 games) is much quicker with alpha-beta pruning applied.
@@ -152,13 +157,13 @@ The dependency of the depth parameter can be investigated by running 5000 simula
 
 ![Minimax depth study]({{ site.baseurl }}/images/mancala/min_max_depth_study.png)
 
-As we would expect, as the depth is increase then player one's win rate increases - to almost 80%!
+As we would expect, as the depth is increased, then player one's win rate increases - to almost 80%!
 It appears that the win rate starts to saturate, which is likely because at some point the large depth means that the trees
 will reach the end of the game (no more moves will be available).
-However, I did not have the computational power (or patience) to evaluate games with any higher depth.
+However, I did not have the computational power (nor patience) to evaluate games with any higher depth.
 
 ## Putting it all together
-Putting it all together, I ran simulations of several different agents against each other, and calculated player one's win rate.
+Putting it all together, I ran simulations of several different agents against each other, and calculated player one's win rate for all these combinations.
 The matrix of these probabilities is shown below.
 
 ![Player 1 win probabilities]({{ site.baseurl }}/images/mancala/player_1_win_probs.png)
@@ -173,5 +178,5 @@ It appears that whatever the strategy, choosing bucket 4 as an initial choice is
 
 ## What's next?
 This post has 'part 1' in the title...so what's next?
-As an excuse to learn about [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning), I want to try implementing an agent with some sort of machine learning focus.
+As an excuse to teach myself[reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning), I want to try implementing an agent with some sort of machine learning focus.
 When I find the time to do this, it will be described in a part 2.
