@@ -31,7 +31,8 @@ body {
 .container {
   margin: 0 auto;
   //max-width: 740px;
-  max-width: 950px;
+  //max-width: 950px;
+  max-width: 1000px;
   padding: 0 10px;
   width: 100%;
 }
@@ -178,6 +179,13 @@ p > img {
   text-align: center;
   display: block;
   margin: 0 auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 // Fixes images in popup boxes from Google Translate
