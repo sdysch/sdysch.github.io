@@ -7,6 +7,12 @@ permalink: /photos/
 Here are various photos that I have taken on trips and holidays. Enjoy
 
 <figure>
+	<img src="{{ site.baseurl }}/images/photos/sunset_sweden.jpg" width="100%" align="left">
+</figure>
+
+_Sunrise over Sweden_
+
+<figure>
 	<img src="{{ site.baseurl }}/images/photos/ingleton_waterfall.jpg" width="100%" align="left">
 </figure>
 
