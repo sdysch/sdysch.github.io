@@ -10,6 +10,7 @@ package.json
 *.gem
 *.gemspec
 .jekyll-cache
+vendor/
 
 # ignoring my global gitignore
 !images/*
