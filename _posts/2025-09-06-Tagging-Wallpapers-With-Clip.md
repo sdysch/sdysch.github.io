@@ -23,6 +23,24 @@ python tag_wallpapers.py ./figs/ --top-k 1
 
 After running the script, an image of Budapest that was previously named `Budapest.jpg` is now renamed to `Budapest_city.jpg`:  
 
-![](/images/250906/Budapest_city.jpg)
+<figure style="text-align: center;">
+    <img src="/images/250906/Budapest_city.jpg" width="50%">
+</figure>
 
 Simple, but maybe useful.
+
+
+I also made a simple [streamlit app](https://github.com/sdysch/wallpaper_tagger/blob/main/browse_wallpapers.py) to visualise the wallpapers, selecting a category.
+Currently it is only supported for the top `k=1` images, but an extension to multiple tags is simple.
+
+<div style="display: flex; gap: 30px; justify-content: center; align-items: flex-start;">
+  <figure style="text-align: center;">
+    <img src="/images/250906/nature.png" style="width: 400px;">
+    <figcaption><em>Nature category</em></figcaption>
+  </figure>
+
+  <figure style="text-align: center;">
+    <img src="/images/250906/winter.png" style="width: 400px;">
+    <figcaption><em>Winter category</em></figcaption>
+  </figure>
+</div>
