@@ -4,105 +4,157 @@ title: Photos
 permalink: /photos/
 ---
 
-Here are various photos that I have taken on trips and holidays. Enjoy
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/moth.jpg" width="100%" align="left">
-</figure>
-_Moth_
+<style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/sunset_sweden.jpg" width="100%" align="left">
-</figure>
+.gallery figure {
+  margin: 0;
+  text-align: center;
+}
 
-_Sunrise over Sweden_
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  cursor: zoom-in;
+}
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/ingleton_waterfall.jpg" width="100%" align="left">
-</figure>
+.gallery figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.4rem;
+}
+</style>
 
-_Ingleton waterfalls trail_
+<div class="gallery">
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/lake_windmere.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/moth.jpg" data-lightbox="travel" data-title="Moth">
+      <img src="{{ site.baseurl }}/images/photos/moth.jpg" alt="Moth" loading="lazy">
+    </a>
+    <figcaption>Moth</figcaption>
+  </figure>
 
-_Lake Windermere_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/sunset_sweden.jpg" data-lightbox="travel" data-title="Sunrise over Sweden">
+      <img src="{{ site.baseurl }}/images/photos/sunset_sweden.jpg" alt="Sunrise over Sweden" loading="lazy">
+    </a>
+    <figcaption>Sunrise over Sweden</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/marienlyst.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/ingleton_waterfall.jpg" data-lightbox="travel" data-title="Ingleton waterfalls trail">
+      <img src="{{ site.baseurl }}/images/photos/ingleton_waterfall.jpg" alt="Ingleton waterfalls trail" loading="lazy">
+    </a>
+    <figcaption>Ingleton waterfalls trail</figcaption>
+  </figure>
 
-_Beach by Marienlyst Strandhotel_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/lake_windmere.jpg" data-lightbox="travel" data-title="Lake Windermere">
+      <img src="{{ site.baseurl }}/images/photos/lake_windmere.jpg" alt="Lake Windermere" loading="lazy">
+    </a>
+    <figcaption>Lake Windermere</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/grinda.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/marienlyst.jpg" data-lightbox="travel" data-title="Beach by Marienlyst Strandhotel">
+      <img src="{{ site.baseurl }}/images/photos/marienlyst.jpg" alt="Beach by Marienlyst Strandhotel" loading="lazy">
+    </a>
+    <figcaption>Beach by Marienlyst Strandhotel</figcaption>
+  </figure>
 
-_Grinda, Sweden_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/grinda.jpg" data-lightbox="travel" data-title="Grinda, Sweden">
+      <img src="{{ site.baseurl }}/images/photos/grinda.jpg" alt="Grinda, Sweden" loading="lazy">
+    </a>
+    <figcaption>Grinda, Sweden</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/stockholm.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/stockholm.jpg" data-lightbox="travel" data-title="Stockholm, Sweden">
+      <img src="{{ site.baseurl }}/images/photos/stockholm.jpg" alt="Stockholm, Sweden" loading="lazy">
+    </a>
+    <figcaption>Stockholm, Sweden</figcaption>
+  </figure>
 
-_Stockholm, Sweden_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/loch_lomond.jpg" data-lightbox="travel" data-title="Loch Lomond in the mist">
+      <img src="{{ site.baseurl }}/images/photos/loch_lomond.jpg" alt="Loch Lomond in the mist" loading="lazy">
+    </a>
+    <figcaption>Loch Lomond in the mist</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/loch_lomond.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/loch_lomond2.jpg" data-lightbox="travel" data-title="Loch Lomond">
+      <img src="{{ site.baseurl }}/images/photos/loch_lomond2.jpg" alt="Loch Lomond" loading="lazy">
+    </a>
+    <figcaption>Loch Lomond</figcaption>
+  </figure>
 
-_Loch Lomond in the mist_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/loch_lomond_conic_hill.jpg" data-lightbox="travel" data-title="Conic Hill, Scotland">
+      <img src="{{ site.baseurl }}/images/photos/loch_lomond_conic_hill.jpg" alt="Conic Hill, Scotland" loading="lazy">
+    </a>
+    <figcaption>Conic Hill, Scotland</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/loch_lomond2.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/fletcher_moss.jpg" data-lightbox="travel" data-title="Fletcher Moss park, Manchester">
+      <img src="{{ site.baseurl }}/images/photos/fletcher_moss.jpg" alt="Fletcher Moss park, Manchester" loading="lazy">
+    </a>
+    <figcaption>Fletcher Moss park, Manchester</figcaption>
+  </figure>
 
-_Loch Lomond_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/riveaulx.jpg" data-lightbox="travel" data-title="Riveaulx Abbey">
+      <img src="{{ site.baseurl }}/images/photos/riveaulx.jpg" alt="Riveaulx Abbey" loading="lazy">
+    </a>
+    <figcaption>Riveaulx Abbey</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/loch_lomond_conic_hill.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/sestriere.jpg" data-lightbox="travel" data-title="Sestriere, Italy, above the clouds">
+      <img src="{{ site.baseurl }}/images/photos/sestriere.jpg" alt="Sestriere, Italy, above the clouds" loading="lazy">
+    </a>
+    <figcaption>Sestriere, Italy, above the clouds</figcaption>
+  </figure>
 
-_Conic Hill, Scotland_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/tignes.jpg" data-lightbox="travel" data-title="Tignes, France">
+      <img src="{{ site.baseurl }}/images/photos/tignes.jpg" alt="Tignes, France" loading="lazy">
+    </a>
+    <figcaption>Tignes, France</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/fletcher_moss.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/zermatt.jpg" data-lightbox="travel" data-title="Zermatt, Switzerland">
+      <img src="{{ site.baseurl }}/images/photos/zermatt.jpg" alt="Zermatt, Switzerland" loading="lazy">
+    </a>
+    <figcaption>Zermatt, Switzerland</figcaption>
+  </figure>
 
-_Fletcher Moss park, Manchester_
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/zermatt2.jpg" data-lightbox="travel" data-title="Zermatt, Switzerland">
+      <img src="{{ site.baseurl }}/images/photos/zermatt2.jpg" alt="Zermatt, Switzerland" loading="lazy">
+    </a>
+    <figcaption>Zermatt, Switzerland</figcaption>
+  </figure>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/riveaulx.jpg" width="100%" align="left">
-</figure>
+  <figure>
+    <a href="{{ site.baseurl }}/images/photos/coex.jpg" data-lightbox="travel" data-title="Starfield Library, Seoul, South Korea">
+      <img src="{{ site.baseurl }}/images/photos/coex.jpg" alt="Starfield Library, Seoul, South Korea" loading="lazy">
+    </a>
+    <figcaption>Starfield Library, Seoul, South Korea</figcaption>
+  </figure>
 
-_Riveaulx Abbey_
+</div>
 
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/sestriere.jpg" width="100%" align="left">
-</figure>
-
-_Sestriere, Italy, above the clouds_
-
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/tignes.jpg" width="100%" align="left">
-</figure>
-
-_Tignes, France_
-
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/zermatt.jpg" width="100%" align="left">
-</figure>
-
-_Zermatt, Switzerland_
-
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/zermatt2.jpg" width="100%" align="left">
-</figure>
-
-_Zermatt, Switzerland_
-
-<figure>
-	<img src="{{ site.baseurl }}/images/photos/coex.jpg" width="100%" align="left">
-</figure>
-
-_Starfield Library, Seoul, South Korea_
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
