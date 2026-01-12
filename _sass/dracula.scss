@@ -93,3 +93,9 @@ code {
 .highlight .vi { color: #8be9fd; font-style: italic } /* Name.Variable.Instance */
 .highlight .vm { color: #8be9fd; font-style: italic } /* Name.Variable.Magic */
 .highlight .il { color: #bd93f9 } /* Literal.Number.Integer.Long */
+
+/* Inline code only (Nord-inspired) */
+body :not(pre) > code {
+  color: #81a1c1;
+  background-color: #3b4252 !important;
+}
