@@ -22,4 +22,9 @@ I work with a range of tools to explore, analyse, and visualise data:
 - **Editors & Productivity:** Neovim, VS Code, and yes...I prefer the IPython REPL with [iron.nvim](https://github.com/Vigemus/iron.nvim) over Jupyter (but that's another story)
 - **Operating Systems:** Linux (currently Arch Linux; previously Xubuntu/Ubuntu + XFCE), using Linux almost exclusively since 2017
 
+![Max](./images/Max.jpg){:style="float: left; width: 200px; height: auto; margin-right: 20px; margin-bottom: 10px;"}
+I enjoy long walks with my excitable [Tibetan Terrier](https://en.wikipedia.org/wiki/Tibetan_Terrier), baking sourdough bread, and playing video games.
+I also like caring for my house plants, and tinkering with my [dotfiles](https://github.com/sdysch/dotfiles/) to keep my setups neat and efficient.
+
+
 Feel free to get in [contact](/contact)!
