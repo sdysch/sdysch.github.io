@@ -75,7 +75,7 @@ There are a few options to do this:
 * opening figures in external windows
 * using vim's ability to run shell commands e.g. `! sxiv my_plot.png`
 
-Or what I do: switching to a tmux pane where plots are saved and opening from the terminal (and even using kitty's graphics protocol[^1], probably for another post)
+Or what I do: switching to a tmux pane where plots are saved and opening from the terminal (and even using [kitty's](https://sw.kovidgoyal.net/kitty/) graphics protocol[^1], probably for another post)
 
 ---
 
