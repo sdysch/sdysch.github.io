@@ -19,7 +19,7 @@ I work with a range of tools to explore, analyse, and visualise data:
 
 - **Programming & Data Science:** Python (Pandas, NumPy, Matplotlib, Seaborn), Scikit-learn, TensorFlow
 - **Data Workflow:** SQL, Git/GitHub/GitLab (and some previously _very_ old svn usage)
-- **Editors & Productivity:** Neovim, LazyGit/NeoGit, tmux, sometimes vscode, and yes...I prefer the IPython REPL with [iron.nvim](https://github.com/Vigemus/iron.nvim) over Jupyter (but that's another story)
+- **Editors & Productivity:** Neovim, LazyGit/NeoGit, tmux, sometimes vscode, and yes...I prefer the IPython REPL with [iron.nvim](https://github.com/Vigemus/iron.nvim) over Jupyter (but that's [another story](https://sdysch.github.io/notebooks_in_vim/))
 - **Operating Systems:** Linux (currently Arch Linux; previously Xubuntu/Ubuntu + XFCE), using Linux almost exclusively since 2017
 
 ![Max](./images/Max.jpg){:style="float: left; width: 200px; height: auto; margin-right: 20px; margin-bottom: 10px;"}
