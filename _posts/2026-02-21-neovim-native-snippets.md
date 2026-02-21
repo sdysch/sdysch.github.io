@@ -28,6 +28,13 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 ```
+
+The syntax is:
+```
+# search pattern: description
+... snippet ...
+```
+
 # Fuzzy finding snippets
 I integrate my workflow with [fzf-lua](https://github.com/ibhagwan/fzf-lua) to easily find snippets
 [using this function](https://github.com/sdysch/dotfiles/blob/204f2c058b212eeada85ee6da6240e217d966910/setups/common/.config/nvim/lua/config/keymaps.lua#L139-L195)
