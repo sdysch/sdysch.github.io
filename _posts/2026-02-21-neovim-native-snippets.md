@@ -43,7 +43,10 @@ The keymap _<leader>-si_ will open a floating `fzf` preview, showing what the se
 
 ![](/images/20260221/1.png)
 
-The really cool bit (if I say so myself) is this line: `local snippet_file = vim.fn.expand('~/.config/nvim/snippets/' .. ft .. '_snippets.txt')`,
+The really cool bit (if I say so myself) is this line:
+```lua
+local snippet_file = vim.fn.expand('~/.config/nvim/snippets/' .. ft .. '_snippets.txt')
+```
 which will select the correct snippet file based on the current filetype. This allows me to use the same binding across all files.
 
 ![](/images/20260221/2.png)
