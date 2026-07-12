@@ -5,7 +5,7 @@ layout: default
 # Hello!
 ![face](./images/me.png){:style="display: block; width: 200px; height:auto; margin-left: auto; margin-right:40px; float: left;"}
 
-I'm Sam, a data scientist working in hospitality. I have previously worked in the mobility/traffic space, and energy.
+I'm Sam, a data scientist with experience in forecasting, ML, and statistical modelling across hospitality, road traffic/mobility, and energy.
 
 I have a background in academia; I was a physicist at [The University of Manchester (UK)](https://www.manchester.ac.uk/), 
 where I worked on the [ATLAS experiment](https://atlas.cern/) at the [Large Hadron Collider](https://home.cern/science/accelerators/large-hadron-collider) (LHC), [CERN](https://home.cern/).  
